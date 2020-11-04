@@ -17,6 +17,8 @@ Python3.7+
 
 pip install -r requirements.txt
 
+docker-compose
+
 
 # How to use
 
