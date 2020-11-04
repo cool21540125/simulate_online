@@ -9,5 +9,6 @@ step3:
 
 clear:
 	docker-compose down -v
+	docker rmi demo_production:1.0
 
 .PHONY: step1 step2 step3 clear
