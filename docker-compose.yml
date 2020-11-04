@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  mysql57:
+    build: .
+    image: demo_production:1.0
+    container_name: demo_production_db
+    environment:
+      TZ: Asia/Taipei
+      MYSQL_ROOT_PASSWORD: 1qaz@WSX
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "53306:3306"
+
+  demo_redis:
+    image: redis
+    container_name: demo_production_cache
+    ports:
+      - "56379:6379"
